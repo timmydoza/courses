@@ -3,7 +3,7 @@
 # ensure system is updated and has basic build tools
 sudo apt-get update
 sudo apt-get --assume-yes upgrade
-sudo apt-get --assume-yes install tmux build-essential gcc g++ make binutils
+sudo apt-get --assume-yes install tmux build-essential gcc g++ make binutils unzip
 sudo apt-get --assume-yes install software-properties-common
 
 # download and install GPU drivers
@@ -46,7 +46,7 @@ echo '{
 }' > ~/.keras/keras.json
 
 # install cudnn libraries
-wget "http://files.fast.ai/files/cudnn-8.0-linux-x64-v6.0.tgz" -O "cudnn.tgz"
+wget "http://files.fast.ai/files/cudnn.tgz" -O "cudnn.tgz"
 tar -zxf cudnn.tgz
 cd cuda
 sudo cp lib64/* /usr/local/cuda/lib64/
